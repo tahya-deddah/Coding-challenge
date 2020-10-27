@@ -26,8 +26,13 @@ itk.imwrite(median, args.output_image)
 
 #create a vtk window
 rw = vtk.vtkRenderWindow()
+#rw.SetSize(400,400)
 iren = vtk.vtkRenderWindowInteractor()
 iren.SetRenderWindow(rw)
+
+
+
+
 
 
 # display the input image    
@@ -46,6 +51,15 @@ ren1.AddActor(actor1)
 ren1.ResetCamera()
 
 
+# create a text for the input image
+txt = vtk.vtkTextActor()
+txt.SetInput("input image")
+txtprop=txt.GetTextProperty()
+txtprop.SetFontFamilyToArial()
+txtprop.SetFontSize(70)
+#txtprop.SetColor(1,1,1)
+txt.SetDisplayPosition(250,110)
+ren1.AddActor(txt)
 
 # display the output image ( filtred image)
 ren2= vtk.vtkRenderer()
@@ -61,7 +75,24 @@ actor2.GetMapper().SetInputConnection(reader2.GetOutputPort())
 
 ren2.AddActor(actor2)
 ren2.ResetCamera()
+
+
+
+# create a text for the output image
+txt2 = vtk.vtkTextActor()
+txt2.SetInput("output image")
+txtprop=txt2.GetTextProperty()
+txtprop.SetFontFamilyToArial()
+txtprop.SetFontSize(70)
+txtprop.SetColor(1,1,1)
+txt2.SetDisplayPosition(1700,110)
+ren2.AddActor(txt2)
+
+
+
+
  
+
 
 # display the vtk window with two images   
 rw.Render()
