@@ -33,11 +33,6 @@ public:
     QWidget *centralwidget;
     QPushButton *Button_5;
     QPushButton *Button;
-    QWidget *gridLayoutWidget;
-    QGridLayout *gridLayout;
-    QCheckBox *checkBox;
-    //QPushButton *Button_1;
-    //QCheckBox *checkBox_2;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *Button_2;
@@ -49,6 +44,8 @@ public:
     QLabel *label_3;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_1;
+    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -56,7 +53,6 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        //MainWindow->resize(442, 310);
         MainWindow->resize(500, 500);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -71,17 +67,6 @@ public:
         Button->setObjectName(QString::fromUtf8("Button"));
         Button->setGeometry(QRect(250, 200, 92, 27));
 
-
-        gridLayoutWidget = new QWidget(centralwidget);
-        gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(20, 20, 251, 151));
-        gridLayout = new QGridLayout(gridLayoutWidget);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        checkBox = new QCheckBox(gridLayoutWidget);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
-
-        gridLayout->addWidget(checkBox, 0, 0, 1, 1);
 
 
         verticalLayoutWidget = new QWidget(centralwidget);
@@ -129,6 +114,16 @@ public:
         lineEdit_1->setGeometry(QRect(30, 200, 200, 25));
 
 
+        lineEdit_2 = new QLineEdit(centralwidget);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(30, 40, 100, 25));
+
+
+        lineEdit_3 = new QLineEdit(centralwidget);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(30, 70, 100, 25));
+
+
         label_3= new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(200, 260, 70, 15));
@@ -156,7 +151,6 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         Button_5->setText(QApplication::translate("MainWindow", "Enter", 0));
         Button->setText(QApplication::translate("MainWindow", "Enter", 0));
-        checkBox->setText(QApplication::translate("MainWindow", "checkbox 1", 0));
         Button_2->setText(QApplication::translate("MainWindow", "filter input image", 0));
         Button_3->setText(QApplication::translate("MainWindow", "display output image", 0));
         Button_4->setText(QApplication::translate("MainWindow", "save output image", 0));
@@ -166,6 +160,8 @@ public:
         label2->setText(QApplication::translate("MainWindow", "", 0));
         lineEdit->setText(QApplication::translate("MainWindow", "choose an image", 0));
         lineEdit_1->setText(QApplication::translate("MainWindow", "choose where you save output image", 0));
+        lineEdit_2->setText(QApplication::translate("MainWindow", "1st parameter", 0));
+        lineEdit_3->setText(QApplication::translate("MainWindow", "2nd parameter", 0));
         label_3->setText(QApplication::translate("MainWindow", "output image", 0));
     } // retranslateUi
 

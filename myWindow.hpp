@@ -24,8 +24,7 @@ public:
     ~myWindow();
 
 private slots:
-    void actionCheckBox1();
-   // void actionCheckBox2();
+    
     void actionButton1();
     std::string actionButton2();
     void actionButton3();
@@ -33,7 +32,8 @@ private slots:
     void actionButton5();
     std::string actionTextEdit();
     std::string actionTextEdit_1();
-
+    std::string actionTextEdit_2();
+    std::string actionTextEdit_3();
 private:
 
     Ui::MainWindow *ui;

@@ -30,7 +30,7 @@ myWindow::myWindow(QWidget *parent)
     ui->setupUi(this);
 
     //Links buttons and actions
-    connect(ui->checkBox,SIGNAL(clicked()),this,SLOT(actionCheckBox1()));
+   
     connect(ui->Button,SIGNAL(clicked()),this,SLOT(actionButton1()));
     connect(ui->Button_2,SIGNAL(clicked()),this,SLOT(actionButton2()));
     connect(ui->Button_3,SIGNAL(clicked()),this,SLOT(actionButton3()));
@@ -38,16 +38,13 @@ myWindow::myWindow(QWidget *parent)
     connect(ui->Button_5,SIGNAL(clicked()),this,SLOT(actionButton5()));
     connect(ui->lineEdit,SIGNAL(editingFinished()),this,SLOT(actionTextEdit()));
     connect(ui->lineEdit_1,SIGNAL(editingFinished()),this,SLOT(actionTextEdit_1()));
+    connect(ui->lineEdit_2,SIGNAL(editingFinished()),this,SLOT(actionTextEdit_2()));
+    connect(ui->lineEdit_3,SIGNAL(editingFinished()),this,SLOT(actionTextEdit_3()));
 }
 
 myWindow::~myWindow()
 {
     std::cout<<"Destructor of myWindow is called"<<std::endl;
-}
-
-void myWindow::actionCheckBox1()
-{
-    std::cout<<"CheckBox 1 click: "<<ui->checkBox->isChecked()<<std::endl;
 }
 
 void myWindow::actionButton1()
@@ -89,8 +86,15 @@ std::string myWindow::actionButton2()
     // parametres of the filtres:
     InputImageType::SizeType indexRadius;
 
-    indexRadius[0] = 1; // radius along x
-    indexRadius[1] = 1; // radius along y
+    std::string parametre_1 = myWindow::actionTextEdit_2();
+    std::string parametre_2 = myWindow::actionTextEdit_3();
+
+    const char* parametre1 = const_cast<char*>(parametre_1.c_str());
+    const char* parametre2 = const_cast<char*>(parametre_2.c_str());
+
+
+    indexRadius[0] = atoi(parametre1); // radius along x
+    indexRadius[1] = atoi(parametre2); // radius along y
     filter->SetRadius( indexRadius );
 
     // filter the input image
@@ -120,7 +124,7 @@ void myWindow::actionButton3()
 
 void myWindow::actionButton4()
 {
-    std::cout<<"Button 4 click"<<std::endl;
+    std::cout<<"image saved"<<std::endl;
 }
 
 void myWindow::actionButton5()
@@ -154,4 +158,20 @@ std::string myWindow::actionTextEdit_1()
 
    
     return ui->lineEdit_1->text().toStdString();
+}
+
+std::string myWindow::actionTextEdit_2()
+{
+    std::cout<<"Text edit: ["<<ui->lineEdit_2->text().toStdString()<<"]"<<std::endl;
+
+   
+    return ui->lineEdit_2->text().toStdString();
+}
+
+std::string myWindow::actionTextEdit_3()
+{
+    std::cout<<"Text edit: ["<<ui->lineEdit_3->text().toStdString()<<"]"<<std::endl;
+
+   
+    return ui->lineEdit_3->text().toStdString();
 }
