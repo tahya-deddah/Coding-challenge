@@ -1,0 +1,8 @@
+-I/home/tahya/Documents/first_exercice/build/ITKIOFactoryRegistration
+-I/tools/VTK/VTK_6.3.0/VTK_6.3.0_linux64_dyn-Qt4.8.6-Python2.7.7_Release/include/vtk-6.3
+-I/tools/ITK/ITKv4.9.0/ITKv4.9.0_THL64_dyn_Release/include/ITK-4.9
+-DvtkRenderingCore_AUTOINIT=3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL)
+-DITK_IO_FACTORY_REGISTER_MANAGER
+-o
+/home/tahya/Documents/first_exercice/build/src/moc_myWindow.cpp
+/home/tahya/Documents/first_exercice/src/myWindow.hpp

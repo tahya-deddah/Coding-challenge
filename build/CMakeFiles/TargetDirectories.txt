@@ -1,0 +1,4 @@
+/home/tahya/Documents/first_exercice/build/CMakeFiles/rebuild_cache.dir
+/home/tahya/Documents/first_exercice/build/CMakeFiles/first_exercice.dir
+/home/tahya/Documents/first_exercice/build/CMakeFiles/edit_cache.dir
+/home/tahya/Documents/first_exercice/build/CMakeFiles/first_exercice_autogen.dir
