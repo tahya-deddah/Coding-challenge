@@ -32,22 +32,21 @@ static const qt_meta_stringdata_myWindow_t qt_meta_stringdata_myWindow = {
 QT_MOC_LITERAL(0, 0, 8), // "myWindow"
 QT_MOC_LITERAL(1, 9, 13), // "actionButton1"
 QT_MOC_LITERAL(2, 23, 0), // ""
-QT_MOC_LITERAL(3, 24, 13), // "actionButton2"
-QT_MOC_LITERAL(4, 38, 11), // "std::string"
-QT_MOC_LITERAL(5, 50, 13), // "actionButton3"
-QT_MOC_LITERAL(6, 64, 13), // "actionButton4"
-QT_MOC_LITERAL(7, 78, 13), // "actionButton5"
+QT_MOC_LITERAL(3, 24, 13), // "actionButton3"
+QT_MOC_LITERAL(4, 38, 13), // "actionButton4"
+QT_MOC_LITERAL(5, 52, 13), // "actionButton5"
+QT_MOC_LITERAL(6, 66, 13), // "actionButton2"
+QT_MOC_LITERAL(7, 80, 11), // "std::string"
 QT_MOC_LITERAL(8, 92, 14), // "actionTextEdit"
 QT_MOC_LITERAL(9, 107, 16), // "actionTextEdit_1"
 QT_MOC_LITERAL(10, 124, 16), // "actionTextEdit_2"
 QT_MOC_LITERAL(11, 141, 16) // "actionTextEdit_3"
 
     },
-    "myWindow\0actionButton1\0\0actionButton2\0"
-    "std::string\0actionButton3\0actionButton4\0"
-    "actionButton5\0actionTextEdit\0"
-    "actionTextEdit_1\0actionTextEdit_2\0"
-    "actionTextEdit_3"
+    "myWindow\0actionButton1\0\0actionButton3\0"
+    "actionButton4\0actionButton5\0actionButton2\0"
+    "std::string\0actionTextEdit\0actionTextEdit_1\0"
+    "actionTextEdit_2\0actionTextEdit_3"
 };
 #undef QT_MOC_LITERAL
 
@@ -67,9 +66,9 @@ static const uint qt_meta_data_myWindow[] = {
  // slots: name, argc, parameters, tag, flags
        1,    0,   59,    2, 0x08 /* Private */,
        3,    0,   60,    2, 0x08 /* Private */,
-       5,    0,   61,    2, 0x08 /* Private */,
-       6,    0,   62,    2, 0x08 /* Private */,
-       7,    0,   63,    2, 0x08 /* Private */,
+       4,    0,   61,    2, 0x08 /* Private */,
+       5,    0,   62,    2, 0x08 /* Private */,
+       6,    0,   63,    2, 0x08 /* Private */,
        8,    0,   64,    2, 0x08 /* Private */,
        9,    0,   65,    2, 0x08 /* Private */,
       10,    0,   66,    2, 0x08 /* Private */,
@@ -77,14 +76,14 @@ static const uint qt_meta_data_myWindow[] = {
 
  // slots: parameters
     QMetaType::Void,
-    0x80000000 | 4,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    0x80000000 | 4,
-    0x80000000 | 4,
-    0x80000000 | 4,
-    0x80000000 | 4,
+    0x80000000 | 7,
+    0x80000000 | 7,
+    0x80000000 | 7,
+    0x80000000 | 7,
+    0x80000000 | 7,
 
        0        // eod
 };
@@ -96,11 +95,11 @@ void myWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->actionButton1(); break;
-        case 1: { std::string _r = _t->actionButton2();
+        case 1: _t->actionButton3(); break;
+        case 2: _t->actionButton4(); break;
+        case 3: _t->actionButton5(); break;
+        case 4: { std::string _r = _t->actionButton2();
             if (_a[0]) *reinterpret_cast< std::string*>(_a[0]) = _r; }  break;
-        case 2: _t->actionButton3(); break;
-        case 3: _t->actionButton4(); break;
-        case 4: _t->actionButton5(); break;
         case 5: { std::string _r = _t->actionTextEdit();
             if (_a[0]) *reinterpret_cast< std::string*>(_a[0]) = _r; }  break;
         case 6: { std::string _r = _t->actionTextEdit_1();

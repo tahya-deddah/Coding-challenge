@@ -77,17 +77,14 @@ public:
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         Button_2 = new QPushButton(verticalLayoutWidget);
         Button_2->setObjectName(QString::fromUtf8("Button_2"));
-
         verticalLayout->addWidget(Button_2);
 
         Button_3 = new QPushButton(verticalLayoutWidget);
         Button_3->setObjectName(QString::fromUtf8("Button_3"));
-
         verticalLayout->addWidget(Button_3);
 
         Button_4 = new QPushButton(verticalLayoutWidget);
         Button_4->setObjectName(QString::fromUtf8("Button_4"));
-
         verticalLayout->addWidget(Button_4);
 
         label = new QLabel(centralwidget);
@@ -98,12 +95,9 @@ public:
         label1->setObjectName(QString::fromUtf8("label1"));
         label1->setGeometry(QRect(50, 270, 59, 15));
 
-
         label2 = new QLabel(centralwidget);
         label2->setObjectName(QString::fromUtf8("label2"));
         label2->setGeometry(QRect(50, 270, 59, 15));
-
-
 
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
@@ -113,16 +107,13 @@ public:
         lineEdit_1->setObjectName(QString::fromUtf8("lineEdit_1"));
         lineEdit_1->setGeometry(QRect(30, 200, 200, 25));
 
-
         lineEdit_2 = new QLineEdit(centralwidget);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
         lineEdit_2->setGeometry(QRect(30, 40, 100, 25));
 
-
         lineEdit_3 = new QLineEdit(centralwidget);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
         lineEdit_3->setGeometry(QRect(30, 70, 100, 25));
-
 
         label_3= new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));

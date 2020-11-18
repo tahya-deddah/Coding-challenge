@@ -30,7 +30,6 @@ myWindow::myWindow(QWidget *parent)
     ui->setupUi(this);
 
     //Links buttons and actions
-   
     connect(ui->Button,SIGNAL(clicked()),this,SLOT(actionButton1()));
     connect(ui->Button_2,SIGNAL(clicked()),this,SLOT(actionButton2()));
     connect(ui->Button_3,SIGNAL(clicked()),this,SLOT(actionButton3()));
@@ -50,18 +49,11 @@ myWindow::~myWindow()
 void myWindow::actionButton1()
 {
     std::cout<<"output image shoosed"<<std::endl;
-    std::string str = myWindow::actionTextEdit_1();
-    const char* output_image = const_cast<char*>(str.c_str());
-    int x ;
-    x =atoi(output_image);
-
-    std::cout <<x<<std::endl;
 }
 
 std::string myWindow::actionButton2()
 {
-    std::cout<<"Button 2 click"<<std::endl;
-
+    
 
     typedef unsigned char          png;
     const unsigned int             Dimension = 2;
@@ -72,14 +64,13 @@ std::string myWindow::actionButton2()
     reader->SetFileName( filename_input );
 
 
-
     typedef itk::Image< png, Dimension >   OutputImageType;
     typedef itk::ImageFileWriter< OutputImageType >  WriterType;
     WriterType::Pointer writer = WriterType::New();
     std::string filename_output=  myWindow::actionTextEdit_1();
     writer->SetFileName( filename_output );
 
-// instanciate the filtre
+    //instanciate the filtre
     typedef itk::MedianImageFilter<InputImageType, OutputImageType >  FilterType;
     FilterType::Pointer filter = FilterType::New();
 
@@ -102,6 +93,9 @@ std::string myWindow::actionButton2()
     writer->SetInput( filter->GetOutput() );
     writer->Update();
 
+    //display
+    std::cout<<"image smoothed"<<std::endl;
+
     return filename_output;
 
 }
@@ -109,7 +103,6 @@ std::string myWindow::actionButton2()
 
 void myWindow::actionButton3()
 {
-    std::cout<<"Button 3 click"<<std::endl;
     std::string out_put = myWindow::actionButton2();
     char* output_image = const_cast<char*>(out_put.c_str());
     QPixmap p(output_image);
@@ -117,7 +110,7 @@ void myWindow::actionButton3()
     ui->label2->setScaledContents(true);
     ui->label2->adjustSize();
     ui->label2->setGeometry(200,280,150,150);
- 
+
 }
 
 
@@ -129,7 +122,7 @@ void myWindow::actionButton4()
 
 void myWindow::actionButton5()
 {
-    std::cout<<"image choisi"<<std::endl;
+   
     std::string str = myWindow::actionTextEdit();
     char* c = const_cast<char*>(str.c_str());
     QPixmap pm(c);
@@ -137,9 +130,7 @@ void myWindow::actionButton5()
     ui->label1->setScaledContents(true);
     ui->label1->adjustSize();
     ui->label1->setGeometry(30,280,150,150);
-    
-
-
+    std::cout<<"image choosed"<<std::endl;
 }
 
 

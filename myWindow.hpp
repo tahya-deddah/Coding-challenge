@@ -26,10 +26,10 @@ public:
 private slots:
     
     void actionButton1();
-    std::string actionButton2();
     void actionButton3();
     void actionButton4();
     void actionButton5();
+    std::string actionButton2();
     std::string actionTextEdit();
     std::string actionTextEdit_1();
     std::string actionTextEdit_2();
